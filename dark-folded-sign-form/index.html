@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Folded Form Design</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+      $(document).ready(function(){
+        $('.signIn').click(function(){
+            $('.fold').toggleClass('active')
+        })
+      })
+  </script>
+</head>
+<body>
+    <div class="container">
+      <div class="signIn">Click Here to Sign In</div>
+      <div class="fold">
+        <form>
+          <input type="text" name="" placeholder="Username">
+          <input type="password" name="" placeholder="Password">
+          <input type="submit" name="" value="Login">
+          <a href="#">Forget Password</a>
+
+        </form>
+      </div>
+    </div>
+</body>
+</html>
