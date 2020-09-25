@@ -1,0 +1,103 @@
+How to add Media Query in your HTML Websites?
+
+Media Query:
+
+Media query is a CSS technique introduced in CSS3.
+
+A media query consists of optional media type and zeo or more expressions that limit the stylesheet's scope by using media features, such as width, height and color.
+
+It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+
+Syntax: 
+@media not only mediatype and (expressions / media features) { CSS; }
+
+
+
+Ex:
+
+@media screen and (min-width:480px){
+body{
+background-color: lightgreen;}
+}
+
+// OR
+
+@media (min-width:480px){
+body{
+background-color: lightgreen;
+}
+}
+
+Use can also use these methods:
+
+all - Used all media type devices
+print - Used for printers
+screen - Used for computer screen, tablets, smart-phones etc.
+speech - Used for screenreaders that "reads" the page out loud
+
+If you use the not only operators, you must an explict media type.
+
+By using Logical Operators:
+
+And:
+ - @media (min-width: 800px){ CSS } 
+ - @media (min-width: 800px) and (orientation: landscape) { CSS }
+ - @media screen and (min-width: 800px) and (orientation: landscape) { CSS }
+ 
+ 
+OR (Comma ,):
+ - @media (min-width: 800px), (orientation: landscape) { CSS }
+ 
+Not:
+ - @media not all and (min-width: 800px) { CSS }
+ - @media not (all and (min-width: 800px)) { CSS }
+
+ - @media not screen and (color), print and (color) { CSS }
+ - @media (not (screen and (color))), print and (color) { CSS }
+ 
+ Here is the example code, you can create a html file:
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Query in CSS</title>
+  <style>
+
+    /* div {
+      width: auto;
+      height: 300px;
+      background-color: pink;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 600px) {
+      p { font-size: 24px; font-weight: bold; }
+    } */
+
+
+    body { background-color: pink;}
+    @media screen and (min-width: 600px)
+    { body { background-color: red; } }
+
+    @media screen and (min-width: 768px)
+    { body { background-color: blue; } }
+
+    @media screen and (min-width: 992px)
+    { body { background-color: orange; } }
+
+
+  </style>
+</head>
+<body>
+    <p>Our pre-built themes are easy to customize with a drag-and-drop editor. Just choose your industry and we'll give you a ready-made site, complete with images. Or, make it completely your own with thousands of third-party Websites themes and plugins to choose from.</p>
+
+    <div></div>
+
+</body>
+</html>
+ 
